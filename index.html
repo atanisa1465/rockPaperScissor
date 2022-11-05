@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Afifa's Rock-Paper-Scissor</title>
+  <link rel="stylesheet" href="/style.css" />
+  <script src="/script.js" defer></script>
+</head>
+
+<body onload="initialize();">
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+
+      <p>
+        <span style="font-size: 24px; font-weight: bold">Rock, Paper, Scissors!</span><br /><br />The player starts off
+        with five of each weapon: rock,
+        paper, and scissor. After every tool you select, the computer will
+        select a tool at the same time. Then, the winner will be identified.
+        If you win, you steal the computer's weapon, but if you lose, the
+        computer steals your weapon. The first one to lose all their weapons
+        loses! The table will update with each round. Remember, you cannot use
+        one weapon three times in a row - it will break!. Don't try to speed
+        click. The buttons will not work after you select a choice.
+        <br /><br />
+        Good luck! You can click on "Directions" to see these rules again!
+      </p>
+
+      <form id = "toolNum">
+          <label for="rock">How many rocks do you want (1-10): </label>
+          <input type="number" name="rockNum" min="1" max="10" placeholder="5" style="
+        width: 66px;" />
+          <br><br>
+          <label for="paper">How many papers do you want (1-10): </label>
+          <input type="number" min="1" max="10" name="paperNum" placeholder="5" style="
+        width: 66px;
+    "><br><br>
+          <label for="rock">How many scissors do you want (1-10): </label>
+          <input type="number" min="1" max="10" name="scissorNum" placeholder="5" style="
+        width: 66px;
+    "><br><br>
+      </form>
+      <span class="close">&#10003;</span>
+    </div>
+  </div>
+
+  <h1>
+    <img style="
+    width: 684px;
+    height: 138px;" src="images/headingIMG.png" />
+  </h1>
+
+  <!--     Player Choose Box -->
+  <div id="playerButton">
+    <div id="line"></div>
+  </div>
+  <!-- -->
+
+  <!--     Game Space -->
+  <table id="game">
+    <tr>
+      <td class="left">
+        <button class="tools1" id="rock1" onclick="changePlayer('rock')"></button>
+        <p class="tools1" id="rock1Count"></p>
+      </td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>
+        <button class="tools2" id="rock2"></button>
+        <p class="tools2" id="rock2Count"></p>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="left">
+        <button class="tools1" id="paper1" onclick="changePlayer('paper')"></button>
+        <p class="tools1" id="paper1Count"></p>
+      </td>
+      <td>
+        <div id="player">
+          <img src="/images/playerIMG.png" />
+        </div>
+      </td>
+      <td>
+        <div id="playerChoose">
+          <p>I choose:</p>
+          <div id="choice"></div>
+        </div>
+      </td>
+
+      <td id="design">
+        <div id="compChoose">
+          <p style="text-align: right">Computer chooses:</p>
+          <div id="compChoice"></div>
+        </div>
+      </td>
+      <td>
+        <div id="computer">
+          <img src="/images/computerIMG.png" style="width: 231px" />
+        </div>
+      </td>
+
+      <td>
+        <button class="tools2" id="paper2"></button>
+        <p class="tools2" id="paper2Count"></p>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="left">
+        <button class="tools1" id="scissors1" onclick="changePlayer('scissor')"></button>
+        <p class="tools1" id="scissors1Count"></p>
+      </td>
+      <td></td>
+      <td>
+        <p id="playerWin" class="winTag"></p>
+      </td>
+
+      <td>
+        <p id="compWin" class="winTag"></p>
+      </td>
+      <td></td>
+
+      <td>
+        <button class="tools2" id="scissors2"></button>
+        <p class="tools2" id="scissors2Count"></p>
+      </td>
+    </tr>
+  </table>
+  <!-- -->
+
+  <p id="gameOver"></p>
+
+  <div class="tooltip">
+    Directions
+    <span class="tooltiptext">
+      The player starts off with five of each weapon: rock, paper, and
+      scissor. After every tool you select, the computer will select a tool at
+      the same time. Then, the winner will be identified. If you win, you
+      steal the computer's weapon, but if you lose, the computer steals your
+      weapon. The first one to lose all their weapons loses! The table will
+      update with each round. Remember, you cannot use one weapon three times
+      in a row - it will break!. Don't try to speed click. The buttons will
+      not work after you select a choice.</span>
+  </div>
+  <table id="log" class="log">
+    <tr class="">
+      <th class="label">Your Play</th>
+      <th class="label">Computer Play</th>
+      <th class="label">Winner</th>
+    </tr>
+  </table>
+  <button id="reset" onclick="restart()">Reset</button>
+</body>
+
+</html>

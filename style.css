@@ -1,0 +1,266 @@
+body {
+   transform: scale(1);
+/*    transform-origin: 0 0; */
+}
+
+#rock1 {
+/*   float: left; */
+  width: 200px;
+  height: 170px;
+  padding: 20px;
+  background-image: url("/images/rockIMG.png");
+  background-position: center;
+  background-color: #edfff2;
+  background-repeat: no-repeat;
+  background-size: 200px 170px;
+  border-radius: 20px;
+  border: 0px;
+}
+
+#paper1 {
+/*   float: left; */
+  width: 200px;
+  height: 170px;
+  padding: 20px;
+  background-image: url("/images/paperIMG.png");
+  background-position: center;
+  background-color: #edfff2;
+  background-repeat: no-repeat;
+  background-size: 200px 170px;
+  border-radius: 20px;
+  border: 0px;
+}
+
+#scissors1 {
+/*   float: left; */
+  width: 200px;
+  height: 170px;
+  padding: 20px;
+  background-image: url("images/scissorIMG.png");
+  background-position: center;
+  background-color: #edfff2;
+  background-repeat: no-repeat;
+  background-size: 200px 170px;
+  border-radius: 20px;
+  border: 0px;
+}
+
+#playerButton {
+  padding-top: 50px;
+  padding-left: 20px;
+}
+
+#player {
+  padding-left: 45px;
+  padding-right:20px;
+}
+
+#computer {
+  width: 231px;
+  height: 208px;
+  padding-left: 20px;
+  padding-right: 90px;
+}
+
+#playerChoose {
+  padding-right:50px;
+}
+
+#choice {
+/*   position: absolute;
+  right: -70px;
+  top: 60px; */
+  width: 200px;
+  height: 170px;
+  background-position: center;
+  background-color: #edfff2;
+  background-repeat: no-repeat;
+  background-size: 200px 170px;
+  border-radius: 20px;
+}
+
+#compChoice {
+/*   position: absolute;
+  right: -70px;
+  top: 60px; */
+  width: 200px;
+  height: 170px;
+  background-position: center;
+  background-color: #ffd9f961;
+  background-repeat: no-repeat;
+  background-size: 200px 170px;
+  border-radius: 20px;
+}
+
+
+/* #line {
+    position: absolute;
+    left: 914px;
+    top: 418px;
+    border-left: 6px solid #d6faff;
+    height: 100px;
+} */
+
+#rock2 {
+  width: 200px;
+  height: 170px;
+  padding: 20px;
+  background-image: url("images/rockIMG.png");
+  background-position: center;
+  background-color: #ffd9f961;
+  background-repeat: no-repeat;
+  background-size: 200px 170px;
+  border-radius: 20px;
+  border: 0px;
+}
+
+#paper2 {
+/*   float: left; */
+  width: 200px;
+  height: 170px;
+  padding: 20px;
+  background-image: url("images/paperIMG.png");
+  background-position: center;
+  background-color: #ffd9f961;
+  background-repeat: no-repeat;
+  background-size: 200px 170px;
+  border-radius: 20px;
+  border: 0px;
+}
+
+#scissors2 {
+/*   float: left; */
+  width: 200px;
+  height: 170px;
+  padding: 20px;
+  background-image: url("images/scissorIMG.png");
+  background-position: center;
+  background-color: #ffd9f961;
+  background-repeat: no-repeat;
+  background-size: 200px 170px;
+  border-radius: 20px;
+  border: 0px;
+}
+
+#design {
+  padding-left: 50px;
+  padding-right: 0px;
+}
+
+h1 {
+  position: absolute;
+  left: 578px;
+  padding-top: 25px;
+}
+
+.winTag {
+/*   text-align: center; */
+  font-weight: bold;
+  font-size: 18px;
+  position: relative;
+  top: -82px;
+}
+
+#playerWin {
+  float: left;
+}
+
+#compWin {
+  float: right;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */ 
+  z-index: 1; /* Sit on top */
+}
+
+.modal-content {
+  background-color: #e6fbff;
+  width: 45%;
+  height: 50%;
+  left: 480px;
+  position: fixed;
+  top: 200px;
+  padding: 20px;
+  text-align: center;
+  border-radius: 20px;
+}
+
+.close {
+  color: #111212;
+/*   float: right; */
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.tooltip {
+    position: absolute;
+    top: 47px;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+    left: 180px;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 450px;
+  background-color: black;
+  color: #ffffff;
+  text-align: center;
+  padding: 10px 10px;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+.label {
+  border: 1px solid;
+}
+
+
+.log {
+/*   width: 100%; */
+  padding: 20px;
+  margin-left: auto;
+  margin-right:auto;
+}
+
+#reset {
+  position: absolute;
+  top: 47px;
+  display: inline-block;
+  left: 1641px;
+  width: 78px;
+  height: 28px;
+  border-radius: 12px;
+  background: #e6fbff;
+  color: black;
+}
+
+#gameOver {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  position: absolute;
+  top: 625px;
+  left: 575px;
+}
+
+#game {
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 50px;
+}
